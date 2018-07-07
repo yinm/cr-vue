@@ -8,6 +8,9 @@
 <body>
   <div id="app">
     name: <input v-model="name">
+    <br />
+    hp: <input v-model="hp">
+    <br />
     <button @click="add">Add a monster</button>
     <ul>
       <li v-for="monster in monsters" :key="monster.id">

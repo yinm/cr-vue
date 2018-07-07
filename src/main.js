@@ -2,6 +2,7 @@ new Vue({
   el: '#app',
   data: {
     name: 'キマイラ',
+    hp: 100,
     monsters: [
       { id: 1, name: 'スライム', hp: 100 },
       { id: 2, name: 'ゴブリン', hp: 200 },
@@ -17,7 +18,7 @@ new Vue({
       this.monsters.push({
         id: max + 1,
         name: this.name,
-        hp: 500,
+        hp: this.hp,
       })
     }
   }
