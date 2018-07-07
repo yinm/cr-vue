@@ -7,14 +7,10 @@
 </head>
 <body>
   <div id="app">
-    name: <input v-model="name">
-    <br />
-    hp: <input v-model="hp">
-    <br />
-    <button @click="add">Add a monster</button>
     <ul>
-      <li v-for="monster in monsters" :key="monster.id">
-        ID.{{ monster.id }} {{ monster.name }} HP.{{ monster.hp }}
+      <li v-for="(item, index) in list" :key="item.id">
+        ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        <button @click="remove(index)">Delete</button>
       </li>
     </ul>
   </div>
