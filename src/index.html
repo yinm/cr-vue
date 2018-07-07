@@ -7,8 +7,8 @@
 </head>
 <body>
   <div id="app">
-    <p>{{ count }}回クリックしたよ</p>
-    <button @click="increment">count up</button>
+    <p :class="{ child: isChild, 'is-active': isActive }">Text</p>
+    <p :style="{ color: textColor, backgroundColor: bgColor }">Text</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
