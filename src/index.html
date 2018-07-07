@@ -7,17 +7,7 @@
 </head>
 <body>
   <div id="app">
-    <ul>
-      <li
-        v-for="(item, index) in list"
-        :key="item.id"
-        v-if="item.hp"
-      >
-        ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        <span v-if="item.hp < 50">瀕死！</span>
-        <button @click="attack(index)">attack!!!</button>
-      </li>
-    </ul>
+    <span v-for="char in chars">{{ char }}</span>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
