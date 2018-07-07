@@ -1,8 +1,12 @@
 const app = new Vue({
   el: '#app',
+  data: {
+    message: 'Hello Vue.js',
+  },
   methods: {
-    handler(comment) {
-      console.log(comment)
+    handleInput(event) {
+      this.message = event.target.value
+      console.log(this.message)
     }
   }
 })

@@ -7,8 +7,7 @@
 </head>
 <body>
   <div id="app">
-    <div @click.right="handler">example</div>
-    <div @click.right.prevent="handler">example</div>
+    <input :value="message" @change="handleInput" />
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
