@@ -1,6 +1,6 @@
 const app = new Vue({
   el: '#app',
-  created() {
-    console.log('created!!!'  )
+  data: {
+    message: 'Hello <strong>Vue.js</strong>'
   }
 })
