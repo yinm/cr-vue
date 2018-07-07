@@ -1,6 +1,8 @@
 const app = new Vue({
   el: '#app',
-  data: {
-    message: 'Hello <strong>Vue.js</strong>'
+  methods: {
+    handleClick() {
+      alert('clicked!!!')
+    }
   }
 })
