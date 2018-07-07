@@ -1,6 +1,8 @@
 const app = new Vue({
   el: '#app',
-  data: {
-    list: ['apple', 'banana', 'strawberry'],
+  methods: {
+    handleClick(event) {
+      alert(event.target)
+    }
   }
 })
