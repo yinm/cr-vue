@@ -8,8 +8,8 @@ new Vue({
     ],
   },
   methods: {
-    remove(index) {
-      this.list.splice(index, 1)
+    powerup(index) {
+      this.$set(this.list, index, { id: index + 1, name: `キング${this.list[index].name}`, hp: this.list[index].hp * 2 })
     }
   }
 })
