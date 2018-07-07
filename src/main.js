@@ -1,6 +1,10 @@
-const app = new Vue({
+new Vue({
   el: '#app',
   data: {
-    message: 'Vue.js!!!',
+    message: {
+      value: 'Hello Vue.js!',
+    },
+    list: ['apple', 'banana', 'strawberry'],
+    num: 1,
   }
 })
