@@ -1,6 +1,6 @@
 const app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue.js!',
-  },
+    message: 'Hello <strong>Vue.js</strong>'
+  }
 })
