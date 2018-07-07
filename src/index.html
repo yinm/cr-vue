@@ -7,7 +7,9 @@
 </head>
 <body>
   <div id="app">
-    <input type="text" v-bind:value="message">
+    <div :text-content.prop="message"></div>
+    <div :scroll-top.prop="scroll"></div>
+    <pre>{{ $data }}</pre>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
