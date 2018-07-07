@@ -8,12 +8,12 @@
 <body>
   <div id="app">
     <ul>
-      <li v-for="monster in monsters"
-          :key="monster.id"
-          :class="{ tuyoi: monster.hp > 300 }"
+      <li
+        v-for="monster in monsters"
+        :key="monster.id"
+        v-if="monster.hp < 300"
       >
         ID.{{ monster.id }} {{ monster.name }} HP.{{ monster.hp }}
-        <span v-if="monster.hp > 300">つよい！</span>
       </li>
     </ul>
   </div>
