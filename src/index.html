@@ -7,7 +7,9 @@
 </head>
 <body>
   <div id="app">
-    <p ref="hello">Hello</p>
+    <button @click="handleClick">count up</button>
+    <button @click="show=!show">show / hide</button>
+    <span ref="count" v-if="show">0</span>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
