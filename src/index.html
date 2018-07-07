@@ -7,10 +7,16 @@
 </head>
 <body>
   <div id="app">
-    <template v-if="ok">
-      <header>title</header>
-      <div>content</div>
-    </template>
+    <div v-if="type === 'A'">
+      type は A
+    </div>
+    <div v-else-if="type === 'B'">
+      type は B
+    </div>
+    <div v-else>
+      全部違うよ
+    </div>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
