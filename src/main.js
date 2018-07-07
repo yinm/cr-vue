@@ -1,6 +1,11 @@
 new Vue({
   el: '#app',
   data: {
-    chars: 'Vue',
+    list: [],
+  },
+  created() {
+    axios.get('list.json')
+      .then(response => this.list = response.data)
+      .catch(e => console.e)
   }
 })
