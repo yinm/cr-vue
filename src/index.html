@@ -8,9 +8,14 @@
 <body>
   <div id="app">
     <ul>
-      <li v-for="(item, index) in list" :key="item.id">
+      <li
+        v-for="(item, index) in list"
+        :key="item.id"
+        v-if="item.hp"
+      >
         ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        <button @click="powerup(index)">Power UP</button>
+        <span v-if="item.hp < 50">瀕死！</span>
+        <button @click="attack(index)">attack!!!</button>
       </li>
     </ul>
   </div>

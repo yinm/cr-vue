@@ -8,8 +8,8 @@ new Vue({
     ],
   },
   methods: {
-    powerup(index) {
-      this.$set(this.list, index, { id: index + 1, name: `キング${this.list[index].name}`, hp: this.list[index].hp * 2 })
+    attack(index) {
+      this.list[index].hp -= 10
     }
   }
 })
