@@ -1,10 +1,11 @@
 new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue.js',
-    scroll: 0,
+    count: 0,
   },
-  mounted() {
-    this.scroll = 100
+  methods: {
+    increment() {
+      this.count += 1
+    }
   }
 })

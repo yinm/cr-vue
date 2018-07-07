@@ -7,9 +7,8 @@
 </head>
 <body>
   <div id="app">
-    <div :text-content.prop="message"></div>
-    <div :scroll-top.prop="scroll"></div>
-    <pre>{{ $data }}</pre>
+    <p>{{ count }}回クリックしたよ</p>
+    <button @click="increment">count up</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
