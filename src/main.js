@@ -2,15 +2,20 @@ const app = new Vue({
   el: '#app',
   data: {
     width: 800,
+    height: 600,
   },
   computed: {
     halfWidth() {
       return this.width / 2
-    }
-  },
-  methods: {
-    getHalfWidth() {
-      console.log(this.halfWidth)
+    },
+    halfHeight() {
+      return this.height / 2
+    },
+    halfPoint() {
+      return {
+        x: this.halfWidth,
+        y: this.halfHeight,
+      }
     }
   }
 })
