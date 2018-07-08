@@ -7,13 +7,8 @@
 </head>
 <body>
   <div id="app">
-    <div @click.capture="handler('div1')">
-      div1
-      <div @click="handler('div2')">
-        div2
-        <div @click="handler('div3')">div3</div>
-      </div>
-    </div>
+    <input v-model="message">
+    <p>{{ message }}</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
