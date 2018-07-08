@@ -1,15 +1,7 @@
-const app = new Vue({
-  el: '#app',
-  data: {
-    list: [],
-  },
-  watch: {
-    list() {
-      console.log(`通常:${this.$refs.list.offsetHeight}`)
+Vue.component('my-component', {
+  template: '<p>MyComponent</p>'
+})
 
-      this.$nextTick(() => {
-        console.log(`nextTick:${this.$refs.list.offsetHeight}`)
-      })
-    }
-  }
+new Vue({
+  el: '#app'
 })
