@@ -6,10 +6,12 @@
   <link href="main.css" rel="stylesheet">
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
   <div id="app">
-    <header :class="{ compact: scrollY > 200 }">
-      200pxより下にスクロールしたら .compact を付与
-    </header>
+    <div class="content" style="height: 1000px;">...</div>
+    <div @click="scrollTop">
+      ページ上部へ移動
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
