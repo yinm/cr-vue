@@ -1,9 +1,15 @@
-const scroll = new SmoothScroll()
+$(document).on('click', '[data-update]', function() {
+  console.log('before update:', $('#message').val())
+  $('#message').val($(this).attr('data-update'))
+  console.log('after update:', $('#message').val())
+  $('#message')[0].dispatchEvent(new Event('input'))
+})
+
 new Vue({
   el: '#app',
   methods: {
-    scrollTop() {
-      scroll.animateScroll(0)
+    handleInput(event) {
+      console.log(event.target.value)
     }
   }
 })
