@@ -5,4 +5,8 @@ Vue.component('comp-child', {
 
 new Vue({
   el: '#app',
+  data: {
+    valueA: 'これはA',
+    valueB: 'こればB',
+  }
 })
