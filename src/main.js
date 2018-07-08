@@ -1,18 +1,11 @@
-const app = new Vue({
+new Vue({
   el: '#app',
   data: {
-    edited: false,
-    list: [
-      { id: 1, name: 'apple', price: 100 },
-      { id: 2, name: 'banana', price: 200 },
-    ],
+    value: 'check',
   },
-  created() {
-    const unwatch = this.$watch('list', () => {
-      this.edited = true
-      unwatch()
-    }, {
-      deep: true
-    })
+  watch: {
+    value: _.debounce(newVal => {
+      console.log(newVal)
+    }, 500)
   }
 })
