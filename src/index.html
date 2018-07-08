@@ -7,15 +7,7 @@
 </head>
 <body>
   <div id="app">
-    <ul>
-      <comp-child
-        v-for="item in list"
-        :key="item.id"
-        :name="item.name"
-        :hp="item.hp"
-      >
-      </comp-child>
-    </ul>
+    <comp-child @childs-event="parentsMethod"></comp-child>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
