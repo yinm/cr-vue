@@ -9,7 +9,7 @@
   <div id="app">
     <div @click="handler('div1')">
       div1
-      <a href="#top" @click.stop="handler('div2')">div2</a>
+      <a href="#top" @click.prevent="handler('div2')">div2</a>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
