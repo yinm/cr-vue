@@ -1,10 +1,12 @@
-Vue.filter('localeNum', val => {
-  return val.toLocaleString()
-})
-
 new Vue({
   el: '#app',
   data: {
-    price: 19800,
+    message: 'hello',
+    foo: 'bar',
   },
+  filters: {
+    filter(message, foo, num) {
+      console.log(message, foo, num)
+    }
+  }
 })
