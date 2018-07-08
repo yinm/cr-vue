@@ -1,15 +1,16 @@
-$(document).on('click', '[data-update]', function() {
-  console.log('before update:', $('#message').val())
-  $('#message').val($(this).attr('data-update'))
-  console.log('after update:', $('#message').val())
-  $('#message')[0].dispatchEvent(new Event('input'))
-})
-
-new Vue({
+const app = new Vue({
   el: '#app',
+  data: {
+    width: 800,
+  },
+  computed: {
+    halfWidth() {
+      return this.width / 2
+    }
+  },
   methods: {
-    handleInput(event) {
-      console.log(event.target.value)
+    getHalfWidth() {
+      console.log(this.halfWidth)
     }
   }
 })
