@@ -1,12 +1,12 @@
 new Vue({
   el: '#app',
-  data: {
-    message: 'hello',
-    foo: 'bar',
-  },
   filters: {
-    filter(message, foo, num) {
-      console.log(message, foo, num)
-    }
+    round(val) {
+      return Math.round(val * 100) / 100
+    },
+
+    radian(val) {
+      return val * Math.PI / 100
+    },
   }
 })
