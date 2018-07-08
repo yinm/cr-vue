@@ -1,5 +1,5 @@
 const myComponent = {
-  template: '<p>MyComponent</p>',
+  template: '<p>MyComponent</p>'
 }
 
 new Vue({
