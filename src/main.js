@@ -1,7 +1,15 @@
 Vue.component('comp-child', {
-  template: '<div><slot>何もないよ</slot></div>',
+  template: '<div><slot></slot></div>',
+  data() {
+    return {
+      message: 'Vue.js',
+    }
+  },
 })
 
 new Vue({
   el: '#app',
+  data: {
+    message: 'Hello',
+  },
 })
