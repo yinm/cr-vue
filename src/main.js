@@ -1,15 +1,19 @@
 Vue.component('comp-child', {
-  template: '<div><slot></slot></div>',
-  data() {
-    return {
-      message: 'Vue.js',
-    }
-  },
+  template: `
+<section class="comp-child">
+  <header>
+    <slot name="header">デフォルトタイトル</slot> 
+  </header>  
+  <div class="content">
+    <slot>デフォルトコンテンツ</slot>
+  </div>
+  <slot name="footer">
+     <!-- なければ何も表示しない -->
+  </slot>
+</section>
+  `
 })
 
 new Vue({
   el: '#app',
-  data: {
-    message: 'Hello',
-  },
 })
