@@ -8,10 +8,9 @@
 <body>
   <div id="app">
     <comp-child>
-      <header slot="header">
-        Hello Vue.js!
-      </header>
-      Vue.jsはJSフレームワークです
+      <p slot-scope="props">
+        {{ props.text }}
+      </p>
     </comp-child>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
