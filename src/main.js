@@ -1,17 +1,7 @@
 Vue.component('comp-child', {
-  template: '<div>test</div>',
-  created() {
-    this.$on('open', () => {
-      console.log('testttt')
-    })
-  }
+  template: '<div class="comp-child"><slot></slot></div>',
 })
 
 new Vue({
-  el: '#app',
-  methods: {
-    handleClick() {
-      this.$refs.child.$emit('open')
-    }
-  }
+  el: '#app'
 })
