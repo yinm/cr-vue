@@ -1,7 +1,7 @@
 Vue.component('comp-child', {
-  template: '<div class="comp-child"><slot></slot></div>',
+  template: '<div><slot>何もないよ</slot></div>',
 })
 
 new Vue({
-  el: '#app'
+  el: '#app',
 })
