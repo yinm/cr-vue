@@ -10,7 +10,7 @@
     <p>
       <button @click="show=!show">切り替え</button>
     </p>
-    <transition name="demo">
+    <transition name="demo" appear>
       <div v-if="show">トランジションさせたい要素</div>
     </transition>
   </div>
