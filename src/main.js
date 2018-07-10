@@ -1,15 +1,17 @@
-const app = new Vue({
+Vue.component('comp-board', {
+  template: '<div>Message Board</div>',
+})
+
+Vue.component('comp-form', {
+  template: '<div>Form<textarea v-model="message"></textarea></div>',
+  data() {
+    return { message: '' }
+  }
+})
+
+new Vue({
   el: '#app',
   data: {
-    list: [],
+    current: 'comp-board',
   },
-  watch: {
-    list() {
-      console.log(`通常:${this.$refs.list.offsetHeight}`)
-
-      this.$nextTick(() => {
-        console.log(`nextTick:${this.$refs.list.offsetHeight}`)
-      })
-    }
-  }
 })
