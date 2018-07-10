@@ -1,24 +1,17 @@
-const mixin = {
-  created() {
-    this.hello()
-  },
-  methods: {
-    hello() {
-      console.log('hello from mixin!')
-    }
-  }
-}
-
-Vue.component('my-component-a', {
-  mixins: [mixin],
-  template: '<p>MyComponentA</p>',
+Vue.component('comp-board', {
+  template: '<div>Message Board</div>',
 })
 
-Vue.component('my-component-b', {
-  mixins: [mixin],
-  template: '<p>MyComponentB</p>'
+Vue.component('comp-form', {
+  template: '<div>Form<textarea v-model="message"></textarea></div>',
+  data() {
+    return { message: '' }
+  }
 })
 
 new Vue({
   el: '#app',
+  data: {
+    current: 'comp-board',
+  },
 })
