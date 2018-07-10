@@ -7,7 +7,8 @@
 </head>
 <body>
   <div id="app">
-    <functional-component message="foobar"></functional-component>
+    <button @click="current^=1">toggle</button>
+    <div :is="component"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
