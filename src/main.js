@@ -1,23 +1,24 @@
+const mixin = {
+  created() {
+    this.hello()
+  },
+  methods: {
+    hello() {
+      console.log('hello from mixin!')
+    }
+  }
+}
+
 Vue.component('my-component-a', {
-  template: '<div class="my-component-a">component A</div>',
+  mixins: [mixin],
+  template: '<p>MyComponentA</p>',
 })
 
 Vue.component('my-component-b', {
-  template: '<div class="my-component-b">component B</div>',
+  mixins: [mixin],
+  template: '<p>MyComponentB</p>'
 })
 
 new Vue({
   el: '#app',
-  data: {
-    componentTypes: [
-      'my-component-a',
-      'my-component-b',
-    ],
-    current: 0,
-  },
-  computed: {
-    component() {
-      return this.componentTypes[this.current]
-    }
-  }
 })
