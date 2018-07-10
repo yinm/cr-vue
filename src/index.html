@@ -7,11 +7,11 @@
 </head>
 <body>
   <div id="app">
-    <comp-child>
-      <p slot-scope="props">
-        {{ props.text }}
-      </p>
-    </comp-child>
+    <my-component
+      :name.sync="name"
+      :hp.sync="hp"
+    >
+    </my-component>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
