@@ -1,18 +1,34 @@
-Vue.component('my-circle', {
-  template: '<circle cx="80" cy="75" r="50" :fill="fill"/>',
-  props: {
-    fill: String,
-  },
-})
-
 new Vue({
   el: '#app',
   data: {
-    toggle: false,
+    show: true,
   },
-  computed: {
-    fill() {
-      return this.toggle ? 'lightpink' : 'skyblue'
+  methods: {
+    beforeEnter(el) {
+      console.log('before-enter')
     },
-  },
+    enter(el, done) {
+      console.log('enter')
+      setTimeout(done, 1000)
+    },
+    afterEnter(el) {
+      console.log('after-enter')
+    },
+    enterCancelled(el) {
+      console.log('enter-cancelled')
+    },
+    beforeLeave(el) {
+      console.log('before-leave')
+    },
+    leave(el, done) {
+      console.log('leave')
+      setTimeout(done, 1000)
+    },
+    afterLeave(el) {
+      console.log('after-leave')
+    },
+    leaveCancelled(el) {
+      console.log('leave-cancelled')
+    }
+  }
 })
