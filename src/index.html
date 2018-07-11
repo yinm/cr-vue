@@ -7,10 +7,14 @@
 </head>
 <body>
   <div id="app">
-    <button @click="count++">切り替え</button>
-    <transition>
-      <div :key="count">{{ count }}</div>
-    </transition>
+    <p>
+      <button @click="order=!order">切り替え</button>
+    </p>
+    <transition-group tag="ul" class="list">
+      <li v-for="item in sortedList" :key="item.id">
+        {{ item.name }} {{ item.price }}円
+      </li>
+    </transition-group>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
