@@ -1,17 +1,18 @@
-Vue.component('comp-board', {
-  template: '<div>Message Board</div>',
-})
-
-Vue.component('comp-form', {
-  template: '<div>Form<textarea v-model="message"></textarea></div>',
-  data() {
-    return { message: '' }
-  }
+Vue.component('my-circle', {
+  template: '<circle cx="80" cy="75" r="50" :fill="fill"/>',
+  props: {
+    fill: String,
+  },
 })
 
 new Vue({
   el: '#app',
   data: {
-    current: 'comp-board',
+    toggle: false,
+  },
+  computed: {
+    fill() {
+      return this.toggle ? 'lightpink' : 'skyblue'
+    },
   },
 })
