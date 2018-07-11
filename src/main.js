@@ -1,18 +1,33 @@
-Vue.component('my-circle', {
-  template: '<circle cx="80" cy="75" r="50" :fill="fill"/>',
-  props: {
-    fill: String,
-  },
-})
+const windowPlugin = {
+  install(Vue) {
+    let store = new Vue({
+      data: {
+        scrollY: 0,
+      },
+    })
 
-new Vue({
-  el: '#app',
-  data: {
-    toggle: false,
-  },
+    let timer = null
+    window.addEventListener('scroll', function() {
+      if (timer === null) {
+        timer = setTimeout(function() {
+          store.scrollY = window.scrollY
+          clearTimeout(timer)
+          timer = null
+        }, 200)
+      }
+    })
+
+    Vue.prototype.$window = store.$data
+  }
+}
+
+Vue.use(windowPlugin)
+
+Vue.component('my-component', {
+  template: '<div>{{ scrollY }}</div>',
   computed: {
-    fill() {
-      return this.toggle ? 'lightpink' : 'skyblue'
+    scrollY() {
+      return this.$window.scrollY
     },
   },
 })
