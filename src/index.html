@@ -7,14 +7,12 @@
 </head>
 <body>
   <div id="app">
-    <p>
-      <button @click="order=!order">切り替え</button>
-    </p>
-    <transition-group tag="ul" class="list">
-      <li v-for="item in sortedList" :key="item.id">
-        {{ item.name }} {{ item.price }}円
-      </li>
-    </transition-group>
+    <button @click="toggle=!toggle">切り替え</button>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <transition>
+        <my-circle :fill="fill" :key="fill"></my-circle>
+      </transition>
+    </svg>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
