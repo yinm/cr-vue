@@ -1,18 +1,7 @@
-Vue.component('my-circle', {
-  template: '<circle cx="80" cy="75" r="50" :fill="fill"/>',
-  props: {
-    fill: String,
-  },
-})
+const MyPlugin = {
+  install(Vue, options) {
+    console.log(options)
+  }
+}
 
-new Vue({
-  el: '#app',
-  data: {
-    toggle: false,
-  },
-  computed: {
-    fill() {
-      return this.toggle ? 'lightpink' : 'skyblue'
-    },
-  },
-})
+Vue.use(MyPlugin, { lang: 'ja' })
