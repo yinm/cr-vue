@@ -6,7 +6,8 @@
 </template>
 
 <script>
-  import EditForm from '@/components/EditForm.vue'
+  import EditForm from '@/components/EditForm'
+
   export default {
     name: 'app',
     components: { EditForm },

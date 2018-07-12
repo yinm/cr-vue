@@ -7,7 +7,9 @@ const store = new Vuex.Store({
     message: '初期メッセージ',
   },
   getters: {
-    message(state) { return state.message },
+    message(state) {
+      return state.message
+    },
   },
   mutations: {
     setMessage(state, payload) {
@@ -18,7 +20,7 @@ const store = new Vuex.Store({
     doUpdate({ commit }, message) {
       commit('setMessage', { message })
     }
-  }
+  },
 })
 
 export default store
