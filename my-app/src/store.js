@@ -2,25 +2,33 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
+const moduleA = {
   state: {
-    message: '初期メッセージ',
-  },
-  getters: {
-    message(state) {
-      return state.message
-    },
+    count: 1,
   },
   mutations: {
-    setMessage(state, payload) {
-      state.message = payload.message
+    update(state) {
+      state.count += 100
     }
+  }
+}
+
+const moduleB = {
+  state: {
+    count: 2,
   },
-  actions: {
-    doUpdate({ commit }, message) {
-      commit('setMessage', { message })
+  mutations: {
+    update(state) {
+      state.count += 200
     }
-  },
+  }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    moduleA,
+    moduleB,
+  }
 })
 
 export default store
