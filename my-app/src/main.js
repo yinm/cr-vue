@@ -4,6 +4,11 @@ import store from './store'
 
 console.log(store.state.moduleA.count)
 console.log(store.state.moduleB.count)
-store.commit('update')
+
+store.commit('moduleA/update')
+console.log(store.state.moduleA.count)
+console.log(store.state.moduleB.count)
+
+store.commit('moduleB/update')
 console.log(store.state.moduleA.count)
 console.log(store.state.moduleB.count)
