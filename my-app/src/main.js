@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+import router from './router'
 
-store.dispatch('moduleA/load', '/path/a.json')
-store.dispatch('moduleB/load', '/path/b.json')
+new Vue({
+  el: '#app',
+  router,
+  render: h => h(App)
+})
