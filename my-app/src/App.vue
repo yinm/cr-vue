@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
-    <EditForm />
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/product">商品情報</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
 <script>
-  import EditForm from '@/components/EditForm'
-
   export default {
     name: 'app',
-    components: { EditForm },
-    computed: {
-      message() { return this.$store.getters.message }
-    }
   }
 </script>
