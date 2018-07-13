@@ -15,6 +15,7 @@ export default new VueRouter({
     {
       path: '/product/:id(\\d+)',
       component: Product,
+      props: route => ({ id: Number(route.params.id) }),
     },
   ]
 })
